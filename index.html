@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B0B0C" />
+  <title>ליאם סוויסה | התפתחות אישית בלי פילטרים</title>
+  <meta name="description" content="ליווי אישי 1:1 שלוקח אותך מ'יודע' ל'עושה'. אנטי-גורו: אמיתי, ישיר, חם אבל לא מפנק. קבע שיחת בירור חינם." />
+
+  <!-- ============================================================
+       OPEN GRAPH / SOCIAL  ‹ PLACEHOLDER — החלף URL ותמונה ›
+       ============================================================ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ליאם סוויסה | התפתחות אישית בלי פילטרים" />
+  <meta property="og:description" content="אתה יודע בדיוק מה לעשות. ופשוט לא עושה. בוא נשנה את זה — שיחת בירור חינם." />
+  <meta property="og:image" content="https://REPLACE-ME.example.com/og-image.jpg" /><!-- ‹ PLACEHOLDER › 1200x630 -->
+  <meta property="og:locale" content="he_IL" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:      '#0B0B0C',
+            surface:  '#141416',
+            surface2: '#1C1C20',
+            line:     '#2A2A2E',
+            cream:    '#F4F1EA',
+            muted:    '#B8B4AC',
+            flame:    '#FF5A1F',
+            flameDk:  '#E64A12',
+          },
+          fontFamily: {
+            display: ['Heebo', 'system-ui', 'sans-serif'],
+            body:    ['Assistant', 'system-ui', 'sans-serif'],
+          },
+          maxWidth: { content: '72rem' },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Assistant', system-ui, sans-serif; }
+    h1, h2, h3, .font-display { font-family: 'Heebo', system-ui, sans-serif; }
+
+    /* anchor offset under sticky header */
+    section[id] { scroll-margin-top: 5.5rem; }
+
+    /* subtle film grain — "בלי פילטרים / גלמי" */
+    body::after {
+      content: "";
+      position: fixed; inset: 0; z-index: 100; pointer-events: none;
+      opacity: .045;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* scroll reveal */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease-out, transform .6s ease-out; }
+    .reveal.is-visible { opacity: 1; transform: none; }
+
+    /* marker highlight under key words */
+    .mark {
+      background-image: linear-gradient(transparent 60%, rgba(255,90,31,.30) 60%);
+      padding-inline: .1em;
+    }
+
+    /* focus-visible ring */
+    a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+      outline: 3px solid #FF5A1F; outline-offset: 3px; border-radius: 4px;
+    }
+
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .faq-icon { transform: rotate(45deg); }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+      * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-ink text-cream font-body antialiased selection:bg-flame selection:text-ink">
+
+  <!-- skip link -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-[200] focus:top-3 focus:start-3 focus:bg-flame focus:text-ink focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold">דלג לתוכן</a>
+
+  <!-- ============================================================
+       PLACEHOLDERS לפני העלאה — החלף את כל אלו:
+       • BOOKING_URL  → קישור קביעת שיחה (וואטסאפ / Calendly)  [מופיע בכל כפתורי ה-CTA הראשיים]
+       • טופס המדריך → action של שירות הדיוור (Mailchimp / ActiveCampaign / וכו')
+       • עדויות     → 3 כרטיסים מסומנים בסקשן "מה אומרים"
+       • פרטי קשר   → אימייל, טלפון, קישורי רשתות בפוטר
+       • OG image    → תמונת שיתוף לרשתות
+       קישור הזמנה לדוגמה (וואטסאפ): https://wa.me/972500000000?text=...
+       ============================================================ -->
+
+  <!-- =================== HEADER =================== -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-line/70 bg-ink/85 backdrop-blur-md">
+    <div class="mx-auto flex max-w-content items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+      <a href="#top" class="flex items-center gap-2 font-display text-lg font-extrabold tracking-tight">
+        <span class="inline-block h-3 w-3 rounded-sm bg-flame"></span>
+        ליאם סוויסה
+      </a>
+
+      <nav class="hidden items-center gap-7 text-sm font-semibold text-muted lg:flex" aria-label="ניווט ראשי">
+        <a href="#pain" class="transition-colors hover:text-cream">זה אתה?</a>
+        <a href="#approach" class="transition-colors hover:text-cream">הגישה</a>
+        <a href="#about" class="transition-colors hover:text-cream">מי אני</a>
+        <a href="#value" class="transition-colors hover:text-cream">מה מקבלים</a>
+        <a href="#how" class="transition-colors hover:text-cream">איך זה עובד</a>
+        <a href="#faq" class="transition-colors hover:text-cream">שאלות</a>
+      </nav>
+
+      <a href="https://wa.me/972500000000?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%90%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%AA%20%D7%91%D7%99%D7%A8%D7%95%D7%A8"
+         class="inline-flex min-h-[44px] items-center gap-2 rounded-xl bg-flame px-4 py-2.5 text-sm font-extrabold text-ink shadow-lg shadow-flame/20 transition-colors duration-200 hover:bg-flameDk">
+        שיחת בירור חינם
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <span id="top"></span>
+
+    <!-- =================== HERO =================== -->
+    <section id="hero" class="relative overflow-hidden px-4 pb-20 pt-28 sm:px-6 sm:pt-32 lg:px-8 lg:pb-28 lg:pt-40">
+      <!-- glow -->
+      <div aria-hidden="true" class="pointer-events-none absolute -top-32 left-1/2 h-[42rem] w-[42rem] -translate-x-1/2 rounded-full bg-flame/10 blur-[120px]"></div>
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-[0.04]"
+           style="background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:64px 64px;"></div>
+
+      <div class="relative mx-auto max-w-content">
+        <div class="reveal mx-auto max-w-3xl text-center">
+          <span class="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-muted">
+            <span class="h-1.5 w-1.5 rounded-full bg-flame"></span>
+            התפתחות אישית בלי פילטרים · אנטי-גורו
+          </span>
+
+          <h1 class="mt-6 font-display text-4xl font-black leading-[1.06] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+            אתה יודע בדיוק מה לעשות.
+            <br />
+            ופשוט <span class="mark text-flame">לא עושה.</span>
+          </h1>
+
+          <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
+            ליווי אישי 1:1 שלוקח אותך מ"יודע" ל"עושה". בלי מוטיבציה מזויפת, בלי ציטוטים על רקע שקיעה —
+            רק מישהו שמבין אותך לעומק, אומר לך את האמת בפנים, ודוחף אותך לפעולה.
+          </p>
+
+          <div class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a href="https://wa.me/972500000000?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%90%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%AA%20%D7%91%D7%99%D7%A8%D7%95%D7%A8"
+               class="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-flame px-8 py-4 text-lg font-extrabold text-ink shadow-xl shadow-flame/25 transition-colors duration-200 hover:bg-flameDk sm:w-auto">
+              קבע שיחת בירור חינם
+              <svg class="h-5 w-5 transition-transform duration-200 group-hover:-translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            </a>
+            <a href="#guide"
+               class="inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-line bg-surface px-8 py-4 text-lg font-bold text-cream transition-colors duration-200 hover:border-muted hover:bg-surface2 sm:w-auto">
+              הורד מדריך חינם
+            </a>
+          </div>
+
+          <p class="mt-5 text-sm text-muted">שיחה של 15–20 דק׳ · בלי התחייבות · בלי מכירת חלומות.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== PAIN — "זה אתה" =================== -->
+    <section id="pain" class="border-t border-line/60 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-content">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-widest text-flame">בוא נדבר בכנות</p>
+          <h2 class="mt-3 font-display text-4xl font-black tracking-tight sm:text-5xl">זה אתה?</h2>
+          <p class="mt-4 text-lg text-muted">אם אתה קורא את זה ומנהן — אתה לא לבד, ואתה במקום הנכון.</p>
+        </div>
+
+        <div class="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2">
+          <!-- pain item -->
+          <div class="reveal flex items-start gap-4 rounded-2xl border-s-4 border-s-flame border-y border-e border-line bg-surface p-6">
+            <svg class="mt-1 h-6 w-6 shrink-0 text-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+            <p class="text-lg leading-relaxed">אתה יודע בדיוק מה צריך לעשות — וכבר חודשים לא עושה.</p>
+          </div>
+          <div class="reveal flex items-start gap-4 rounded-2xl border-s-4 border-s-flame border-y border-e border-line bg-surface p-6">
+            <svg class="mt-1 h-6 w-6 shrink-0 text-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
+            <p class="text-lg leading-relaxed">אתה דוחה למחר את מה שאמרת שתעשה היום. כל יום מחדש.</p>
+          </div>
+          <div class="reveal flex items-start gap-4 rounded-2xl border-s-4 border-s-flame border-y border-e border-line bg-surface p-6">
+            <svg class="mt-1 h-6 w-6 shrink-0 text-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+            <p class="text-lg leading-relaxed">אתה מתחיל בכוח, נדלק, ואחרי שבוע נכבה — ושוב מהתחלה.</p>
+          </div>
+          <div class="reveal flex items-start gap-4 rounded-2xl border-s-4 border-s-flame border-y border-e border-line bg-surface p-6">
+            <svg class="mt-1 h-6 w-6 shrink-0 text-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+            <p class="text-lg leading-relaxed">אתה מרגיש שיש בך הרבה יותר — והפער בין הפוטנציאל למציאות הורג אותך.</p>
+          </div>
+        </div>
+
+        <p class="reveal mx-auto mt-10 max-w-2xl text-center text-xl font-bold leading-relaxed">
+          אתה מתוסכל מעצמך. לא מהעולם — <span class="text-flame">מעצמך.</span><br />
+          <span class="text-base font-normal text-muted">וזה לא חייב להישאר ככה.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- =================== APPROACH — למה אני שונה =================== -->
+    <section id="approach" class="relative border-t border-line/60 bg-surface/40 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-content">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-widest text-flame">למה איתי זה אחרת</p>
+          <h2 class="mt-3 font-display text-4xl font-black tracking-tight sm:text-5xl">שני דברים שלרוב לא באים ביחד</h2>
+          <p class="mt-4 text-lg text-muted">רוב המאמנים נותנים אחד מהשניים. הכוח הוא בשילוב.</p>
+        </div>
+
+        <div class="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
+          <!-- side 1 -->
+          <div class="reveal rounded-3xl border border-line bg-ink p-8">
+            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-flame/10 text-flame">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"/><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4"/></svg>
+            </div>
+            <h3 class="font-display text-2xl font-extrabold">מבין אותך לעומק</h3>
+            <p class="mt-3 text-lg leading-relaxed text-muted">
+              אני מקשיב באמת. לא חוטף אותך לתוך תבנית מוכנה. קודם מבין מאיפה אתה בא,
+              מה באמת עוצר אותך, ומה קורה מתחת לפני השטח — לפני שאני אומר מילה אחת על מה לעשות.
+            </p>
+          </div>
+          <!-- side 2 -->
+          <div class="reveal rounded-3xl border border-flame/40 bg-ink p-8">
+            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-flame text-ink">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="font-display text-2xl font-extrabold">אומר לך את האמת בפנים</h3>
+            <p class="mt-3 text-lg leading-relaxed text-muted">
+              ואז אני אומר לך את מה שאף אחד אחר לא מעז. בלי לרפד, בלי לפנק.
+              ודוחף אותך לפעולה — גם, ובעיקר, כשלא בא לך.
+            </p>
+          </div>
+        </div>
+
+        <!-- anti-guru statement -->
+        <div class="reveal mx-auto mt-10 max-w-3xl rounded-3xl border border-line bg-ink p-8 text-center sm:p-10">
+          <p class="font-display text-2xl font-extrabold leading-snug sm:text-3xl">
+            אני לא המאמן המצוחצח עם הציטוטים על רקע שקיעה.
+          </p>
+          <p class="mt-4 text-lg leading-relaxed text-muted">
+            אמיתי, ישיר, חם — אבל לא מפנק. אני לא כאן כדי שתרגיש טוב לרגע.
+            אני כאן כדי <span class="font-bold text-cream">שתזוז.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== ABOUT — מי אני =================== -->
+    <section id="about" class="border-t border-line/60 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-content">
+        <div class="reveal mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-[minmax(0,18rem)_1fr] lg:gap-14">
+          <!-- ‹ PLACEHOLDER — תמונה אמיתית של ליאם › -->
+          <div class="mx-auto w-full max-w-xs">
+            <div class="flex aspect-[4/5] w-full flex-col items-center justify-center gap-2 rounded-3xl border border-dashed border-flame/50 bg-surface text-center text-muted">
+              <svg class="h-10 w-10 text-flame/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+              <span class="px-4 text-sm font-bold">תמונה של ליאם</span>
+              <span class="px-6 text-xs">‹ placeholder — הכנס תמונה אמיתית ›</span>
+            </div>
+          </div>
+
+          <div>
+            <p class="text-sm font-bold uppercase tracking-widest text-flame">מי אני</p>
+            <h2 class="mt-3 font-display text-4xl font-black tracking-tight sm:text-5xl">אני ליאם. לא גורו.</h2>
+            <div class="mt-5 space-y-4 text-lg leading-relaxed text-muted">
+              <p>לא נולדתי "מאמן". הייתי בדיוק במקום שאתה נמצא בו עכשיו — יודע בדיוק מה צריך לעשות, ופשוט לא עושה. משם בניתי לעצמי את הדרך החוצה, וזה לא קרה בזכות ציטוט מעורר השראה.</p>
+              <p>היום אני עושה דבר אחד: לוקח אנשים תקועים ודוחף אותם לפעולה. בלי הצגות, בלי מסכה, בלי "אתה יכול הכל". אתה מולי — אדם אמיתי מול אדם אמיתי. <span class="text-cream">[להשלמה: 2–3 משפטי רקע אמיתיים על ליאם — ניסיון, סיפור אישי, ולמה זה הדבר שלו.]</span></p>
+            </div>
+
+            <!-- ‹ PLACEHOLDER — החלף במספרים אמיתיים › -->
+            <div class="mt-8 grid grid-cols-3 gap-3 sm:gap-4">
+              <div class="rounded-2xl border border-line bg-surface p-4 text-center">
+                <span class="block font-display text-3xl font-black text-flame">[X]+</span>
+                <span class="mt-1 block text-sm text-muted">אנשים בליווי</span>
+              </div>
+              <div class="rounded-2xl border border-line bg-surface p-4 text-center">
+                <span class="block font-display text-3xl font-black text-flame">[X]</span>
+                <span class="mt-1 block text-sm text-muted">שנים בשטח</span>
+              </div>
+              <div class="rounded-2xl border border-line bg-surface p-4 text-center">
+                <span class="block font-display text-3xl font-black text-flame">1:1</span>
+                <span class="mt-1 block text-sm text-muted">ליווי אישי בלבד</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== VALUE — מה מקבלים =================== -->
+    <section id="value" class="border-t border-line/60 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-content">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-widest text-flame">מה אתה לוקח מזה</p>
+          <h2 class="mt-3 font-display text-4xl font-black tracking-tight sm:text-5xl">לא פיצ׳רים. תוצאות.</h2>
+          <p class="mt-4 text-lg text-muted">ככה נראה הליווי בפועל — ומה הוא עושה לך.</p>
+        </div>
+
+        <div class="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-2">
+          <!-- card -->
+          <div class="reveal rounded-3xl border border-line bg-surface p-8 transition-colors duration-200 hover:border-muted/60">
+            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-flame/10 text-flame">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="font-display text-2xl font-extrabold">מפגשים אישיים 1:1</h3>
+            <p class="mt-3 text-lg leading-relaxed text-muted">
+              כל מפגש מסתיים בבהירות מוחלטת ובמשימה אחת שאתה הולך לבצע.
+              לא עוד שיחה נחמדה שמתאדה — נקודת מפנה שיוצאים ממנה עם כיוון.
+            </p>
+          </div>
+
+          <div class="reveal rounded-3xl border border-line bg-surface p-8 transition-colors duration-200 hover:border-muted/60">
+            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-flame/10 text-flame">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></svg>
+            </div>
+            <h3 class="font-display text-2xl font-extrabold">מענה בוואטסאפ בין המפגשים</h3>
+            <p class="mt-3 text-lg leading-relaxed text-muted">
+              ברגע שאתה מתחיל להתחמק — אני שם. אתה לא נופל בין המפגשים.
+              הדחיפה ממשיכה גם ביום שלישי ב-23:00, בדיוק כשהכי קל לוותר.
+            </p>
+          </div>
+
+          <div class="reveal rounded-3xl border border-line bg-surface p-8 transition-colors duration-200 hover:border-muted/60">
+            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-flame/10 text-flame">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <h3 class="font-display text-2xl font-extrabold">ליווי אישי אמיתי, לא תבנית</h3>
+            <p class="mt-3 text-lg leading-relaxed text-muted">
+              התוכנית נבנית סביבך — החיים שלך, הקצב שלך, המכשולים שלך.
+              לא קורס מוקלט, לא PDF גנרי. אדם אחד שמחויב לתוצאה שלך.
+            </p>
+          </div>
+
+          <div class="reveal rounded-3xl border border-line bg-surface p-8 transition-colors duration-200 hover:border-muted/60">
+            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-flame/10 text-flame">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3 class="font-display text-2xl font-extrabold">מישהו שלא נותן לך לרמות את עצמך</h3>
+            <p class="mt-3 text-lg leading-relaxed text-muted">
+              החבלה העצמית שעבדה עליך שנים? עליי היא לא תעבוד.
+              אני זוכר מה אמרת שתעשה — ואשאל. אחריות אמיתית, לא לבד מול עצמך.
+            </p>
+          </div>
+        </div>
+
+        <p class="reveal mx-auto mt-12 max-w-2xl text-center font-display text-2xl font-extrabold leading-snug sm:text-3xl">
+          השורה התחתונה: אתה מפסיק לדבר על זה — <span class="text-flame">ומתחיל לעשות את זה.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- =================== TESTIMONIALS (PLACEHOLDERS) =================== -->
+    <section id="testimonials" class="border-t border-line/60 bg-surface/40 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-content">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-widest text-flame">מה אומרים אחרי</p>
+          <h2 class="mt-3 font-display text-4xl font-black tracking-tight sm:text-5xl">אנשים אמיתיים. שינוי אמיתי.</h2>
+        </div>
+
+        <!-- ‹ PLACEHOLDER NOTICE — מחק את הבאנר הזה כשמכניסים עדויות אמיתיות › -->
+        <div class="reveal mx-auto mt-8 max-w-3xl rounded-xl border border-dashed border-flame/60 bg-flame/5 px-5 py-3 text-center text-sm font-bold text-flame">
+          ‹ אזור עדויות — ממתין לתוכן אמיתי. שמור על המבנה והחלף את שם / גיל / טקסט / תמונה. ›
+        </div>
+
+        <div class="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
+          <!-- testimonial card x3 -->
+          <figure class="reveal flex h-full flex-col rounded-3xl border border-line bg-ink p-7">
+            <div role="img" class="mb-4 flex gap-1 text-flame" aria-label="דירוג חמישה כוכבים">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+            </div>
+            <blockquote class="flex-1 text-lg leading-relaxed text-muted">
+              "[כאן תיכנס עדות אמיתית — מה היה תקוע, מה השתנה, ובאיזו תוצאה קונקרטית. 2–4 שורות בגוף ראשון.]"
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 border-t border-line pt-5">
+              <span class="flex h-11 w-11 items-center justify-center rounded-full border border-dashed border-line bg-surface text-xs text-muted">תמונה</span>
+              <span>
+                <span class="block font-bold text-cream">[שם הלקוח]</span>
+                <span class="block text-sm text-muted">[גיל · עיסוק]</span>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="reveal flex h-full flex-col rounded-3xl border border-line bg-ink p-7">
+            <div role="img" class="mb-4 flex gap-1 text-flame" aria-label="דירוג חמישה כוכבים">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+            </div>
+            <blockquote class="flex-1 text-lg leading-relaxed text-muted">
+              "[עדות אמיתית #2 — עדיף שתדבר על הדחיפה והאחריות, ועל המעבר מלדעת לעשות.]"
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 border-t border-line pt-5">
+              <span class="flex h-11 w-11 items-center justify-center rounded-full border border-dashed border-line bg-surface text-xs text-muted">תמונה</span>
+              <span>
+                <span class="block font-bold text-cream">[שם הלקוח]</span>
+                <span class="block text-sm text-muted">[גיל · עיסוק]</span>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="reveal flex h-full flex-col rounded-3xl border border-line bg-ink p-7">
+            <div role="img" class="mb-4 flex gap-1 text-flame" aria-label="דירוג חמישה כוכבים">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+            </div>
+            <blockquote class="flex-1 text-lg leading-relaxed text-muted">
+              "[עדות אמיתית #3 — תוצאה מספרית או שינוי ברור עובד הכי טוב להמרה.]"
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 border-t border-line pt-5">
+              <span class="flex h-11 w-11 items-center justify-center rounded-full border border-dashed border-line bg-surface text-xs text-muted">תמונה</span>
+              <span>
+                <span class="block font-bold text-cream">[שם הלקוח]</span>
+                <span class="block text-sm text-muted">[גיל · עיסוק]</span>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== MID CTA BAND (אחרי העדויות) =================== -->
+    <section class="px-4 py-16 sm:px-6 lg:px-8">
+      <div class="reveal mx-auto flex max-w-4xl flex-col items-center gap-6 rounded-3xl border border-flame/40 bg-gradient-to-b from-flame/10 to-transparent p-8 text-center sm:p-12">
+        <h2 class="font-display text-3xl font-black leading-tight sm:text-4xl">מספיק לקרוא על זה. בוא נעשה את זה.</h2>
+        <p class="max-w-xl text-lg text-muted">השיחה הראשונה חינם ובלי התחייבות. במקרה הגרוע תצא עם בהירות. במקרה הטוב — עם כיוון חדש.</p>
+        <a href="https://wa.me/972500000000?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%90%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%AA%20%D7%91%D7%99%D7%A8%D7%95%D7%A8"
+           class="group inline-flex items-center justify-center gap-2 rounded-2xl bg-flame px-8 py-4 text-lg font-extrabold text-ink shadow-xl shadow-flame/25 transition-colors duration-200 hover:bg-flameDk">
+          קבע שיחת בירור חינם
+          <svg class="h-5 w-5 transition-transform duration-200 group-hover:-translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- =================== HOW IT WORKS =================== -->
+    <section id="how" class="border-t border-line/60 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-content">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-widest text-flame">פשוט להתחיל</p>
+          <h2 class="mt-3 font-display text-4xl font-black tracking-tight sm:text-5xl">איך זה עובד — 3 צעדים</h2>
+        </div>
+
+        <div class="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-3">
+          <!-- step 1 -->
+          <div class="reveal relative rounded-3xl border border-line bg-surface p-8">
+            <span aria-hidden="true" class="font-display text-6xl font-black text-flame/50">01</span>
+            <h3 class="mt-2 font-display text-2xl font-extrabold">שיחת בירור חינם</h3>
+            <p class="mt-3 text-lg leading-relaxed text-muted">
+              15–20 דק׳. מבינים איפה אתה תקוע, לאן אתה רוצה להגיע, ואם אנחנו בכלל מתאימים.
+              בלי לחץ, בלי מכירה.
+            </p>
+          </div>
+          <!-- step 2 -->
+          <div class="reveal relative rounded-3xl border border-line bg-surface p-8">
+            <span aria-hidden="true" class="font-display text-6xl font-black text-flame/50">02</span>
+            <h3 class="mt-2 font-display text-2xl font-extrabold">תוכנית מותאמת</h3>
+            <p class="mt-3 text-lg leading-relaxed text-muted">
+              בונים יחד מסלול שמדבר על החיים שלך. מה עושים, באיזה סדר,
+              ואיך מתגברים על מה שעצר אותך עד היום.
+            </p>
+          </div>
+          <!-- step 3 -->
+          <div class="reveal relative rounded-3xl border border-flame/40 bg-surface p-8">
+            <span aria-hidden="true" class="font-display text-6xl font-black text-flame">03</span>
+            <h3 class="mt-2 font-display text-2xl font-extrabold">מתחילים לבצע</h3>
+            <p class="mt-3 text-lg leading-relaxed text-muted">
+              מכאן זה ביצוע. מפגשים, דחיפה יומיומית ואחריות אמיתית —
+              עד שאתה זז ורואה תוצאות בשטח.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== LEAD MAGNET — מדריך חינם =================== -->
+    <section id="guide" class="border-t border-line/60 bg-surface/40 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-content">
+        <div class="reveal mx-auto grid max-w-5xl items-center gap-10 rounded-3xl border border-line bg-ink p-8 sm:p-10 md:grid-cols-2 lg:p-12">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-widest text-flame">עוד לא מוכן לשיחה?</p>
+            <h2 class="mt-3 font-display text-3xl font-black leading-tight sm:text-4xl">
+              3 הסיבות האמיתיות שאתה תקוע — ואיך משתחררים
+            </h2>
+            <p class="mt-4 text-lg leading-relaxed text-muted">
+              לא עוד טיפים גנריים. שלוש הסיבות שבאמת מחזיקות אותך במקום —
+              והצעד הראשון לשבור כל אחת מהן. מדריך קצר, ישיר, בלי מילוי.
+            </p>
+            <ul class="mt-6 space-y-3 text-cream">
+              <li class="flex items-center gap-3">
+                <svg class="h-5 w-5 shrink-0 text-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                למה "פשוט תתחיל" אף פעם לא עובד
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="h-5 w-5 shrink-0 text-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                החבלה העצמית שאתה אפילו לא מזהה
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="h-5 w-5 shrink-0 text-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                הצעד הראשון שאפשר לעשות כבר היום
+              </li>
+            </ul>
+          </div>
+
+          <!-- ‹ PLACEHOLDER — חבר את ה-action לשירות הדיוור שלך › -->
+          <form action="#" method="post" class="rounded-2xl border border-line bg-surface p-6 sm:p-7" novalidate>
+            <h3 class="font-display text-xl font-extrabold">שלחו לי את המדריך</h3>
+            <p class="mt-1 text-sm text-muted">מגיע ישר למייל. ללא ספאם.</p>
+
+            <div class="mt-5">
+              <label for="lead-name" class="mb-1.5 block text-sm font-semibold">שם</label>
+              <input id="lead-name" name="name" type="text" autocomplete="given-name" placeholder="איך קוראים לך?"
+                     class="w-full rounded-xl border border-line bg-ink px-4 py-3 text-cream placeholder:text-muted/70 focus:border-flame" />
+            </div>
+
+            <div class="mt-4">
+              <label for="lead-email" class="mb-1.5 block text-sm font-semibold">אימייל</label>
+              <input id="lead-email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="name@example.com"
+                     class="w-full rounded-xl border border-line bg-ink px-4 py-3 text-cream placeholder:text-muted/70 focus:border-flame" />
+            </div>
+
+            <button type="submit"
+                    class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-flame px-6 py-3.5 text-base font-extrabold text-ink transition-colors duration-200 hover:bg-flameDk">
+              שלחו לי את המדריך
+            </button>
+            <p class="mt-3 text-center text-xs text-muted">בלי ספאם · הסרה בלחיצה אחת · הפרטים שלך נשארים אצלי בלבד.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== FAQ =================== -->
+    <section id="faq" class="border-t border-line/60 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-3xl">
+        <div class="reveal text-center">
+          <p class="text-sm font-bold uppercase tracking-widest text-flame">לפני שתשאל</p>
+          <h2 class="mt-3 font-display text-4xl font-black tracking-tight sm:text-5xl">שאלות נפוצות</h2>
+        </div>
+
+        <div class="reveal mt-10 divide-y divide-line overflow-hidden rounded-3xl border border-line bg-surface">
+          <details class="group p-6" name="faq">
+            <summary class="flex items-center justify-between gap-4 text-lg font-bold">
+              כמה זה עולה?
+              <svg class="faq-icon h-6 w-6 shrink-0 text-flame transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+            </summary>
+            <p class="mt-4 leading-relaxed text-muted">
+              המחיר נקבע לפי המסלול שמתאים לך, ויש אפשרות לפריסת תשלומים. את המספרים המדויקים נעבור בשיחת הבירור —
+              אחרי שנבין אם זה בכלל מתאים לך. <span class="text-cream">[להשלמה: טווחי מחיר / מסלולים]</span>
+            </p>
+          </details>
+
+          <details class="group p-6" name="faq">
+            <summary class="flex items-center justify-between gap-4 text-lg font-bold">
+              אין לי זמן לזה.
+              <svg class="faq-icon h-6 w-6 shrink-0 text-flame transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+            </summary>
+            <p class="mt-4 leading-relaxed text-muted">
+              אם אתה תקוע, חוסר הזמן הוא בדיוק הסימפטום. הליווי בנוי להיכנס לחיים העמוסים שלך — מפגשים ממוקדים ומענה בוואטסאפ,
+              בלי לגזול לך שעות. זו לא עוד משימה ברשימה. זה מה שמזיז את כל השאר.
+            </p>
+          </details>
+
+          <details class="group p-6" name="faq">
+            <summary class="flex items-center justify-between gap-4 text-lg font-bold">
+              רגע — זה טיפול?
+              <svg class="faq-icon h-6 w-6 shrink-0 text-flame transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+            </summary>
+            <p class="mt-4 leading-relaxed text-muted">
+              לא. זה ליווי שמכוון אותך קדימה — לפעולה ולתוצאות. אנחנו לא חופרים אחורה בלי סוף;
+              אנחנו מסתכלים קדימה: מה אתה רוצה, מה עוצר אותך עכשיו, ומה אתה עושה עם זה כבר השבוע.
+            </p>
+          </details>
+
+          <details class="group p-6" name="faq">
+            <summary class="flex items-center justify-between gap-4 text-lg font-bold">
+              זה באמת יעבוד עליי? כבר ניסיתי הכל.
+              <svg class="faq-icon h-6 w-6 shrink-0 text-flame transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+            </summary>
+            <p class="mt-4 leading-relaxed text-muted">
+              ניסית לבד, או עם קורס מוקלט שאף אחד לא ידע אם בכלל פתחת. ההבדל כאן הוא אדם אמיתי שלא נותן לך להיעלם.
+              רוב מי שתקוע לא חסר ידע — חסר לו אחריות ודחיפה. את זה בדיוק אתה מקבל.
+            </p>
+          </details>
+
+          <details class="group p-6" name="faq">
+            <summary class="flex items-center justify-between gap-4 text-lg font-bold">
+              מה אם אגלה שזה לא בשבילי?
+              <svg class="faq-icon h-6 w-6 shrink-0 text-flame transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+            </summary>
+            <p class="mt-4 leading-relaxed text-muted">
+              בדיוק בשביל זה יש שיחת בירור חינם. אם לא נתאים — אגיד לך את זה ישר. לא ארדוף אחריך עם משפך מכירה.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== CLOSING CTA =================== -->
+    <section id="contact" class="relative overflow-hidden border-t border-line/60 px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div aria-hidden="true" class="pointer-events-none absolute -bottom-40 left-1/2 h-[40rem] w-[40rem] -translate-x-1/2 rounded-full bg-flame/10 blur-[120px]"></div>
+      <div class="relative mx-auto max-w-3xl text-center">
+        <p class="reveal text-lg text-muted">אתה יכול לסגור את הדף ולחזור להיות תקוע.<br class="hidden sm:block" /> או להרים שיחה של 15 דקות שיכולה לשנות את הכיוון.</p>
+        <h2 class="reveal mt-6 font-display text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+          הגיע הזמן לעבור<br />מ"יודע" ל<span class="text-flame">"עושה".</span>
+        </h2>
+
+        <div class="reveal mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a href="https://wa.me/972500000000?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%90%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%AA%20%D7%91%D7%99%D7%A8%D7%95%D7%A8"
+             class="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-flame px-10 py-5 text-xl font-extrabold text-ink shadow-2xl shadow-flame/30 transition-colors duration-200 hover:bg-flameDk sm:w-auto">
+            קבע שיחת בירור חינם
+            <svg class="h-6 w-6 transition-transform duration-200 group-hover:-translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+          </a>
+        </div>
+        <p class="reveal mt-5 text-sm text-muted">15–20 דק׳ · חינם · בלי התחייבות.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="border-t border-line bg-surface px-4 py-14 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-content">
+      <div class="flex flex-col items-center gap-8 text-center md:flex-row md:items-start md:justify-between md:text-start">
+        <div>
+          <a href="#top" class="flex items-center justify-center gap-2 font-display text-xl font-extrabold md:justify-start">
+            <span class="inline-block h-3 w-3 rounded-sm bg-flame"></span>
+            ליאם סוויסה
+          </a>
+          <p class="mt-2 text-muted">התפתחות אישית בלי פילטרים.</p>
+        </div>
+
+        <!-- ‹ PLACEHOLDER — פרטי קשר וקישורי רשתות › -->
+        <div class="text-muted">
+          <p class="mb-3 font-bold text-cream">יצירת קשר</p>
+          <ul class="space-y-2">
+            <li><a class="transition-colors hover:text-cream" href="mailto:hello@example.com">[אימייל]</a></li>
+            <li><a class="transition-colors hover:text-cream" href="tel:+972500000000">[טלפון]</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="mb-3 font-bold text-cream">עקבו</p>
+          <div class="flex items-center justify-center gap-3 md:justify-start">
+            <!-- Instagram -->
+            <a href="#" aria-label="אינסטגרם ‹placeholder›" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-line text-muted transition-colors hover:border-flame hover:text-flame">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/972500000000" aria-label="וואטסאפ ‹placeholder›" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-line text-muted transition-colors hover:border-flame hover:text-flame">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></svg>
+            </a>
+            <!-- TikTok / placeholder -->
+            <a href="#" aria-label="טיקטוק ‹placeholder›" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-line text-muted transition-colors hover:border-flame hover:text-flame">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8.245a6.5 6.5 0 0 0 3.5 1.02V6.5a3.5 3.5 0 0 1-3.5-3.5h-2.75v11.25a2.25 2.25 0 1 1-2.25-2.25c.17 0 .34.02.5.06V9.27a5 5 0 1 0 4.5 4.98V8.245z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 flex flex-col items-center justify-between gap-3 border-t border-line pt-6 text-sm text-muted md:flex-row">
+        <p>© 2026 ליאם סוויסה. כל הזכויות שמורות.</p>
+        <a href="https://wa.me/972500000000" class="font-bold text-flame transition-colors hover:text-flameDk">שיחת בירור חינם ←</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =================== MOBILE STICKY CTA =================== -->
+  <div id="mobileCta" class="fixed inset-x-0 bottom-0 z-50 translate-y-full border-t border-line bg-ink/95 p-3 backdrop-blur-md transition-transform duration-300 md:hidden">
+    <a href="https://wa.me/972500000000?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%90%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%AA%20%D7%91%D7%99%D7%A8%D7%95%D7%A8"
+       class="flex w-full items-center justify-center gap-2 rounded-xl bg-flame px-6 py-3.5 text-base font-extrabold text-ink">
+      קבע שיחת בירור חינם
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+    </a>
+  </div>
+  <!-- spacer so mobile sticky bar doesn't cover footer end -->
+  <div class="h-20 md:hidden" aria-hidden="true"></div>
+
+  <script>
+    // Scroll reveal — single transition per element, respects reduced-motion (handled in CSS)
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      var hasIO = 'IntersectionObserver' in window;
+
+      if (!hasIO) {
+        els.forEach(function (el) { el.classList.add('is-visible'); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (el) { io.observe(el); });
+      }
+
+      // Mobile sticky CTA: stays hidden while the hero is on screen (avoids a
+      // double-CTA on first paint), then slides up once the hero scrolls away.
+      var hero = document.getElementById('hero');
+      var mobileCta = document.getElementById('mobileCta');
+      if (mobileCta) {
+        if (hasIO && hero) {
+          var barIO = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              mobileCta.classList.toggle('translate-y-full', entry.isIntersecting);
+            });
+          }, { threshold: 0 });
+          barIO.observe(hero);
+        } else {
+          mobileCta.classList.remove('translate-y-full');
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
