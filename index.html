@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0B0B0C" />
   <title>ליאם סוויסה | התפתחות אישית בלי פילטרים</title>
-  <meta name="description" content="ליווי אישי 1:1 שלוקח אותך מדיבורים לעשייה. בלי קשקושים, בלי מוטיבציה מזויפת. השאר פרטים לפגישת היכרות חינם." />
+  <meta name="description" content="ליווי אישי שעוזר לך להתמקד, ליישר את עצמך למטרה ולהתחיל לעשות. פגישת היכרות חינם." />
 
   <!-- OPEN GRAPH (תצוגה מקדימה בשיתוף לרשתות) -->
   <meta property="og:type" content="website" />
@@ -89,12 +89,7 @@
 
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-[200] focus:top-3 focus:start-3 focus:bg-flame focus:text-ink focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold">דלג לתוכן</a>
 
-  <!-- ============================================================
-       מצב: התמונה, ה-OG (URL מלא) והטופס (Web3Forms) מחוברים ופעילים.
-       דומיין: https://no-filters-change.vercel.app/
-       ============================================================ -->
-
-  <!-- =================== MINIMAL TOP (לא נאבבר) =================== -->
+  <!-- header: שם בלבד -->
   <header class="px-4 py-5 sm:px-6 lg:px-8">
     <div class="mx-auto flex max-w-content items-center justify-center sm:justify-start">
       <span class="flex items-center gap-2 font-display text-lg font-extrabold tracking-tight">
@@ -107,14 +102,17 @@
   <main id="main">
 
     <!-- =================== HERO =================== -->
-    <section id="hero" class="relative overflow-hidden px-4 pb-20 pt-10 sm:px-6 sm:pt-14 lg:px-8 lg:pb-28 lg:pt-20">
+    <section id="hero" class="relative overflow-hidden px-4 pb-16 pt-8 sm:px-6 sm:pt-12 lg:px-8 lg:pb-24 lg:pt-16">
       <div aria-hidden="true" class="pointer-events-none absolute -top-32 left-1/2 h-[42rem] w-[42rem] -translate-x-1/2 rounded-full bg-flame/10 blur-[120px]"></div>
       <div aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-[0.04]"
            style="background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:64px 64px;"></div>
 
-      <div class="relative mx-auto max-w-content">
-        <div class="reveal mx-auto max-w-3xl text-center">
-          <span class="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-muted">
+      <div class="relative mx-auto max-w-3xl text-center">
+        <div class="reveal">
+          <img src="liam.jpg" alt="ליאם סוויסה" loading="eager" decoding="async"
+               class="mx-auto h-24 w-24 rounded-full border border-line object-cover" />
+
+          <span class="mt-6 inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-muted">
             <span class="h-1.5 w-1.5 rounded-full bg-flame"></span>
             התפתחות אישית בלי פילטרים
           </span>
@@ -125,12 +123,11 @@
             ופשוט <span class="mark text-flame">לא עושה.</span>
           </h1>
 
-          <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
-            ליווי אישי 1:1 שלוקח אותך מדיבורים לעשייה. בלי קשקושים ובלי מוטיבציה מזויפת.
-            מישהו שמבין אותך, אומר לך את האמת בפנים, ודוחף אותך קדימה עד שאתה באמת זז.
+          <p class="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted sm:text-xl">
+            אני עוזר לך להתמקד, ליישר את עצמך למטרה, ולהתחיל לעשות. במקום לדבר על זה עוד שנה.
           </p>
 
-          <div class="mt-9 flex justify-center">
+          <div class="mt-8 flex justify-center">
             <a href="#form"
                class="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-flame px-8 py-4 text-lg font-extrabold text-ink shadow-xl shadow-flame/25 transition-colors duration-200 hover:bg-flameDk sm:w-auto">
               בוא לפגישת היכרות חינם
@@ -138,225 +135,111 @@
             </a>
           </div>
 
-          <p class="mt-5 text-sm text-muted">פגישת היכרות חינם · בלי התחייבות · בלי לחץ.</p>
+          <p class="mt-4 text-sm text-muted">פגישת היכרות חינם · בלי התחייבות · בלי לחץ.</p>
         </div>
       </div>
     </section>
 
-    <!-- =================== PAIN - "זה אתה" =================== -->
-    <section id="pain" class="border-t border-line/60 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <!-- =================== PAIN =================== -->
+    <section id="pain" class="border-t border-line/60 px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
       <div class="mx-auto max-w-content">
-        <div class="reveal mx-auto max-w-2xl text-center">
-          <p class="text-sm font-bold uppercase tracking-widest text-flame">בוא נדבר בכנות</p>
-          <h2 class="mt-3 font-display text-4xl font-black tracking-tight sm:text-5xl">זה אתה?</h2>
-        </div>
+        <h2 class="reveal text-center font-display text-3xl font-black tracking-tight sm:text-4xl">זה אתה?</h2>
 
-        <div class="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2">
-          <div class="reveal flex items-start gap-4 rounded-2xl border-s-4 border-s-flame border-y border-e border-line bg-surface p-6">
-            <svg class="mt-1 h-6 w-6 shrink-0 text-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
-            <p class="text-lg leading-relaxed">אתה יודע מה צריך לעשות, וכבר חודשים לא עושה.</p>
+        <div class="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-3">
+          <div class="reveal rounded-2xl border-s-4 border-s-flame border-y border-e border-line bg-surface p-5 text-lg">
+            אתה יודע מה צריך לעשות, ופשוט לא עושה.
           </div>
-          <div class="reveal flex items-start gap-4 rounded-2xl border-s-4 border-s-flame border-y border-e border-line bg-surface p-6">
-            <svg class="mt-1 h-6 w-6 shrink-0 text-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
-            <p class="text-lg leading-relaxed">אתה דוחה למחר את מה שאמרת שתעשה היום.</p>
+          <div class="reveal rounded-2xl border-s-4 border-s-flame border-y border-e border-line bg-surface p-5 text-lg">
+            אתה דוחה למחר, כל יום מחדש.
           </div>
-          <div class="reveal flex items-start gap-4 rounded-2xl border-s-4 border-s-flame border-y border-e border-line bg-surface p-6">
-            <svg class="mt-1 h-6 w-6 shrink-0 text-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
-            <p class="text-lg leading-relaxed">אתה מתחיל בכוח, ואחרי שבוע זה מת.</p>
-          </div>
-          <div class="reveal flex items-start gap-4 rounded-2xl border-s-4 border-s-flame border-y border-e border-line bg-surface p-6">
-            <svg class="mt-1 h-6 w-6 shrink-0 text-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
-            <p class="text-lg leading-relaxed">אתה מרגיש שיש בך הרבה יותר, ושאתה מבזבז את זה.</p>
-          </div>
-        </div>
-
-        <p class="reveal mx-auto mt-10 max-w-2xl text-center text-xl font-bold leading-relaxed">
-          ואתה מתבאס. בעיקר <span class="text-flame">מעצמך.</span><br />
-          <span class="text-base font-normal text-muted">וזה לא חייב להישאר ככה. וגם לא לבד.</span>
-        </p>
-
-        <div class="reveal mt-8 text-center">
-          <a href="#form" class="group inline-flex items-center justify-center gap-2 text-lg font-bold text-flame transition-colors duration-200 hover:text-flameDk">
-            בוא נשנה את זה
-            <svg class="h-5 w-5 transition-transform duration-200 group-hover:-translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- =================== APPROACH - למה אני שונה =================== -->
-    <section id="approach" class="relative border-t border-line/60 bg-surface/40 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-      <div class="mx-auto max-w-content">
-        <div class="reveal mx-auto max-w-2xl text-center">
-          <p class="text-sm font-bold uppercase tracking-widest text-flame">למה איתי זה אחרת</p>
-          <h2 class="mt-3 font-display text-4xl font-black tracking-tight sm:text-5xl">שני דברים שלא באים ביחד</h2>
-          <p class="mt-4 text-lg text-muted">רוב המאמנים נותנים אחד מהשניים. הכוח הוא בשילוב.</p>
-        </div>
-
-        <div class="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
-          <div class="reveal rounded-3xl border border-line bg-ink p-8">
-            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-flame/10 text-flame">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"/><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4"/></svg>
-            </div>
-            <h3 class="font-display text-2xl font-extrabold">מבין אותך באמת</h3>
-            <p class="mt-3 text-lg leading-relaxed text-muted">
-              קודם מקשיב ומבין מה באמת עוצר אותך. בלי תבניות מוכנות.
-            </p>
-          </div>
-          <div class="reveal rounded-3xl border border-flame/40 bg-ink p-8">
-            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-flame text-ink">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            </div>
-            <h3 class="font-display text-2xl font-extrabold">ואומר לך את האמת</h3>
-            <p class="mt-3 text-lg leading-relaxed text-muted">
-              ואז אומר לך את האמת בפנים, ודוחף אותך לעשות. גם כשלא בא לך.
-            </p>
-          </div>
-        </div>
-
-        <div class="reveal mx-auto mt-10 max-w-3xl rounded-3xl border border-line bg-ink p-8 text-center sm:p-10">
-          <p class="font-display text-2xl font-extrabold leading-snug sm:text-3xl">
-            לא באתי לפנק אותך. באתי <span class="text-flame">להזיז אותך.</span>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- =================== ABOUT - מי אני =================== -->
-    <section id="about" class="border-t border-line/60 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-      <div class="mx-auto max-w-content">
-        <div class="reveal mx-auto grid max-w-4xl items-center gap-10 md:grid-cols-[minmax(0,16rem)_1fr] lg:gap-14">
-          <div class="mx-auto w-full max-w-[16rem]">
-            <img src="liam.jpg" alt="ליאם סוויסה" loading="lazy" decoding="async"
-                 class="aspect-[4/5] w-full rounded-3xl border border-line object-cover" />
-          </div>
-
-          <div>
-            <p class="text-sm font-bold uppercase tracking-widest text-flame">מי אני</p>
-            <h2 class="mt-3 font-display text-4xl font-black tracking-tight sm:text-5xl">אני ליאם. לא גורו.</h2>
-            <div class="mt-5 space-y-4 text-lg leading-relaxed text-muted">
-              <p>אני לא נביא ולא מאמן-על. סתם בנאדם שלא מסוגל לראות מישהו עם פוטנציאל נשאר תקוע.</p>
-              <p>הליווי שלי הוא 1:1, אישי וישיר. אתה מולי, בלי הצגות ובלי מסכות. רק עבודה אמיתית על מה שיזיז אותך קדימה.</p>
-            </div>
+          <div class="reveal rounded-2xl border-s-4 border-s-flame border-y border-e border-line bg-surface p-5 text-lg">
+            אתה מרגיש שאתה מבזבז את עצמך.
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =================== VALUE - מה מקבלים =================== -->
-    <section id="value" class="border-t border-line/60 bg-surface/40 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <!-- =================== HOW I HELP =================== -->
+    <section id="how" class="border-t border-line/60 bg-surface/40 px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
       <div class="mx-auto max-w-content">
-        <div class="reveal mx-auto max-w-2xl text-center">
-          <p class="text-sm font-bold uppercase tracking-widest text-flame">מה אתה מקבל</p>
-          <h2 class="mt-3 font-display text-4xl font-black tracking-tight sm:text-5xl">לא הבטחות. תוצאות.</h2>
-        </div>
+        <h2 class="reveal text-center font-display text-3xl font-black tracking-tight sm:text-4xl">איך אני עוזר</h2>
 
-        <div class="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-2">
-          <div class="reveal rounded-3xl border border-line bg-ink p-8 transition-colors duration-200 hover:border-muted/60">
-            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-flame/10 text-flame">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <h3 class="font-display text-2xl font-extrabold">מפגשים אישיים 1:1</h3>
-            <p class="mt-3 text-lg leading-relaxed text-muted">
-              כל מפגש נגמר עם ראש צלול ומשימה אחת ברורה לעשות. לא עוד שיחה נחמדה, אלא נקודת מפנה.
-            </p>
-          </div>
-
-          <div class="reveal rounded-3xl border border-line bg-ink p-8 transition-colors duration-200 hover:border-muted/60">
-            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-flame/10 text-flame">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></svg>
-            </div>
-            <h3 class="font-display text-2xl font-extrabold">מענה בוואטסאפ בין המפגשים</h3>
-            <p class="mt-3 text-lg leading-relaxed text-muted">
-              ברגע שאתה מתחיל להתחמק, אני שם. לא נותן לך ליפול בין מפגש למפגש.
-            </p>
-          </div>
-
-          <div class="reveal rounded-3xl border border-line bg-ink p-8 transition-colors duration-200 hover:border-muted/60">
-            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-flame/10 text-flame">
+        <div class="mx-auto mt-10 grid max-w-4xl gap-6 md:grid-cols-3">
+          <div class="reveal rounded-3xl border border-line bg-ink p-6">
+            <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-flame/10 text-flame">
               <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
             </div>
-            <h3 class="font-display text-2xl font-extrabold">ליווי אישי, לא תבנית</h3>
-            <p class="mt-3 text-lg leading-relaxed text-muted">
-              התוכנית נבנית סביבך. החיים שלך, הקצב שלך, מה שתוקע אותך. לא קורס מוקלט וגנרי.
-            </p>
+            <h3 class="font-display text-xl font-extrabold">מתמקדים במה שחשוב</h3>
+            <p class="mt-2 leading-relaxed text-muted">מבינים מה באמת חשוב לך, ומה עוצר אותך.</p>
           </div>
 
-          <div class="reveal rounded-3xl border border-line bg-ink p-8 transition-colors duration-200 hover:border-muted/60">
-            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-flame/10 text-flame">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+          <div class="reveal rounded-3xl border border-line bg-ink p-6">
+            <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-flame/10 text-flame">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></svg>
             </div>
-            <h3 class="font-display text-2xl font-extrabold">אחריות אמיתית</h3>
-            <p class="mt-3 text-lg leading-relaxed text-muted">
-              אני זוכר מה אמרת שתעשה, ואני אשאל. לא נותן לך לעבוד על עצמך כמו עד היום.
-            </p>
+            <h3 class="font-display text-xl font-extrabold">מיישרים אותך למטרה</h3>
+            <p class="mt-2 leading-relaxed text-muted">כיוון אחד ברור. צעד אחרי צעד.</p>
           </div>
-        </div>
 
-        <p class="reveal mx-auto mt-12 max-w-2xl text-center font-display text-2xl font-extrabold leading-snug sm:text-3xl">
-          בשורה התחתונה: אתה מפסיק לדבר על זה, <span class="text-flame">ומתחיל לעשות.</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- =================== HOW IT WORKS =================== -->
-    <section id="how" class="border-t border-line/60 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-      <div class="mx-auto max-w-content">
-        <div class="reveal mx-auto max-w-2xl text-center">
-          <p class="text-sm font-bold uppercase tracking-widest text-flame">פשוט להתחיל</p>
-          <h2 class="mt-3 font-display text-4xl font-black tracking-tight sm:text-5xl">איך זה עובד ב-3 צעדים</h2>
-        </div>
-
-        <div class="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-3">
-          <div class="reveal relative rounded-3xl border border-line bg-surface p-8">
-            <span aria-hidden="true" class="font-display text-6xl font-black text-flame/50">01</span>
-            <h3 class="mt-2 font-display text-2xl font-extrabold">משאירים פרטים</h3>
-            <p class="mt-3 text-lg leading-relaxed text-muted">
-              ממלאים את הטופס. אני מחזיר לך טלפון ונקבע פגישת היכרות. חינם, בלי התחייבות.
-            </p>
-          </div>
-          <div class="reveal relative rounded-3xl border border-line bg-surface p-8">
-            <span aria-hidden="true" class="font-display text-6xl font-black text-flame/50">02</span>
-            <h3 class="mt-2 font-display text-2xl font-extrabold">בונים תוכנית</h3>
-            <p class="mt-3 text-lg leading-relaxed text-muted">
-              מבינים איפה אתה תקוע ולאן אתה רוצה, ובונים מסלול שמתאים לחיים שלך.
-            </p>
-          </div>
-          <div class="reveal relative rounded-3xl border border-flame/40 bg-surface p-8">
-            <span aria-hidden="true" class="font-display text-6xl font-black text-flame">03</span>
-            <h3 class="mt-2 font-display text-2xl font-extrabold">מתחילים לבצע</h3>
-            <p class="mt-3 text-lg leading-relaxed text-muted">
-              מכאן זה עשייה: מפגשים, דחיפה ואחריות, עד שאתה זז ורואה תוצאות.
-            </p>
+          <div class="reveal rounded-3xl border border-flame/40 bg-ink p-6">
+            <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-flame text-ink">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="font-display text-xl font-extrabold">דוחפים לעשייה</h3>
+            <p class="mt-2 leading-relaxed text-muted">אני לא נותן לך להישאר במקום. עד שאתה זז.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =================== FORM - המרה ראשית =================== -->
-    <section id="form" class="relative overflow-hidden border-t border-line/60 bg-surface/40 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <!-- =================== FAQ =================== -->
+    <section id="faq" class="border-t border-line/60 px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+      <div class="mx-auto max-w-2xl">
+        <h2 class="reveal text-center font-display text-3xl font-black tracking-tight sm:text-4xl">שאלות נפוצות</h2>
+
+        <div class="reveal mt-8 divide-y divide-line overflow-hidden rounded-3xl border border-line bg-surface">
+          <details class="group p-6" name="faq">
+            <summary class="flex items-center justify-between gap-4 text-lg font-bold">
+              כמה זה עולה?
+              <svg class="faq-icon h-6 w-6 shrink-0 text-flame transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+            </summary>
+            <p class="mt-3 leading-relaxed text-muted">תלוי במסלול, ויש גם פריסה לתשלומים. נדבר על זה בפגישה, בלי הפתעות.</p>
+          </details>
+
+          <details class="group p-6" name="faq">
+            <summary class="flex items-center justify-between gap-4 text-lg font-bold">
+              אין לי זמן.
+              <svg class="faq-icon h-6 w-6 shrink-0 text-flame transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+            </summary>
+            <p class="mt-3 leading-relaxed text-muted">אם אתה תקוע, זה חלק מהבעיה. הליווי נכנס לחיים שלך, לא מעמיס עליהם.</p>
+          </details>
+
+          <details class="group p-6" name="faq">
+            <summary class="flex items-center justify-between gap-4 text-lg font-bold">
+              זה טיפול?
+              <svg class="faq-icon h-6 w-6 shrink-0 text-flame transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+            </summary>
+            <p class="mt-3 leading-relaxed text-muted">לא. זה ליווי שמכוון אותך קדימה, לפעולה ולתוצאות.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== FORM =================== -->
+    <section id="form" class="relative overflow-hidden border-t border-line/60 bg-surface/40 px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
       <div aria-hidden="true" class="pointer-events-none absolute -top-32 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-flame/10 blur-[120px]"></div>
       <div class="relative mx-auto max-w-xl">
         <div class="reveal text-center">
-          <h2 class="font-display text-4xl font-black tracking-tight sm:text-5xl">מוכן לזוז? <span class="text-flame">השאר פרטים.</span></h2>
-          <p class="mt-4 text-lg leading-relaxed text-muted">
-            תשאיר שם וטלפון ואני אחזור אליך לפגישת היכרות חינם. בלי התחייבות, בלי לחץ, בלי מכירת חלומות.
-          </p>
+          <h2 class="font-display text-3xl font-black tracking-tight sm:text-4xl">בוא נכיר.</h2>
+          <p class="mt-3 text-lg leading-relaxed text-muted">תשאיר שם וטלפון, ואני חוזר אליך לפגישת היכרות חינם. בלי התחייבות.</p>
         </div>
 
-        <!-- ============================================================
-             טופס Web3Forms מחובר ופעיל.
-             השליחה ב-AJAX: המשתמש נשאר בדף ורואה הודעת הצלחה.
-             ============================================================ -->
+        <!-- טופס Web3Forms - מחובר ופעיל -->
         <form id="lead-form" action="https://api.web3forms.com/submit" method="POST"
-              class="reveal mt-10 rounded-3xl border border-line bg-ink p-6 sm:p-8">
+              class="reveal mt-8 rounded-3xl border border-line bg-ink p-6 sm:p-8">
           <input type="hidden" name="access_key" value="5dc68a49-5464-461d-aad5-b270fbe89348" />
           <input type="hidden" name="subject" value="ליד חדש מהאתר: בקשה לפגישת היכרות" />
           <input type="hidden" name="from_name" value="אתר ליאם סוויסה" />
-          <!-- ‹ אופציונלי › למשתמשים ללא JavaScript: הסר הערה והחלף ל-URL של דף תודה
-               כדי שיחזרו לאתר אחרי השליחה:
-               <input type="hidden" name="redirect" value="https://YOUR-DOMAIN/thank-you" /> -->
-          <!-- הגנת ספאם (honeypot) - חייב להישאר ריק -->
           <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
           <div>
@@ -373,7 +256,7 @@
 
           <button id="lead-submit" type="submit"
                   class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-flame px-6 py-4 text-lg font-extrabold text-ink transition-colors duration-200 hover:bg-flameDk disabled:cursor-not-allowed disabled:opacity-70">
-            אני רוצה להתחיל
+            אני רוצה לזוז
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
           </button>
 
@@ -382,98 +265,24 @@
         </form>
       </div>
     </section>
-
-    <!-- =================== FAQ =================== -->
-    <section id="faq" class="border-t border-line/60 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-      <div class="mx-auto max-w-3xl">
-        <div class="reveal text-center">
-          <p class="text-sm font-bold uppercase tracking-widest text-flame">לפני שתשאל</p>
-          <h2 class="mt-3 font-display text-4xl font-black tracking-tight sm:text-5xl">שאלות נפוצות</h2>
-        </div>
-
-        <div class="reveal mt-10 divide-y divide-line overflow-hidden rounded-3xl border border-line bg-surface">
-          <details class="group p-6" name="faq">
-            <summary class="flex items-center justify-between gap-4 text-lg font-bold">
-              כמה זה עולה?
-              <svg class="faq-icon h-6 w-6 shrink-0 text-flame transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-            </summary>
-            <p class="mt-4 leading-relaxed text-muted">
-              המחיר תלוי במסלול שמתאים לך, ויש גם אפשרות לפרוס לתשלומים. נדבר על זה בפגישת ההיכרות. בלי הפתעות ובלי לחץ.
-            </p>
-          </details>
-
-          <details class="group p-6" name="faq">
-            <summary class="flex items-center justify-between gap-4 text-lg font-bold">
-              אין לי זמן לזה.
-              <svg class="faq-icon h-6 w-6 shrink-0 text-flame transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-            </summary>
-            <p class="mt-4 leading-relaxed text-muted">
-              אם אתה תקוע, חוסר זמן זה בדיוק חלק מהבעיה. הליווי בנוי להיכנס לחיים העמוסים שלך, לא להעמיס עליהם עוד.
-            </p>
-          </details>
-
-          <details class="group p-6" name="faq">
-            <summary class="flex items-center justify-between gap-4 text-lg font-bold">
-              רגע, זה טיפול?
-              <svg class="faq-icon h-6 w-6 shrink-0 text-flame transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-            </summary>
-            <p class="mt-4 leading-relaxed text-muted">
-              לא. זה ליווי שמכוון אותך קדימה, לפעולה ולתוצאות. לא חופרים בעבר בלי סוף, מסתכלים על מה שאתה עושה מהיום.
-            </p>
-          </details>
-
-          <details class="group p-6" name="faq">
-            <summary class="flex items-center justify-between gap-4 text-lg font-bold">
-              כבר ניסיתי הכל. זה באמת יעבוד עליי?
-              <svg class="faq-icon h-6 w-6 shrink-0 text-flame transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-            </summary>
-            <p class="mt-4 leading-relaxed text-muted">
-              ניסית לבד, או עם קורס שאף אחד לא בדק אם בכלל פתחת אותו. כאן יש בנאדם אמיתי שלא נותן לך להיעלם.
-              רוב הזמן אתה לא תקוע כי חסר לך ידע. חסר לך דחיפה ומישהו שאתה אחראי מולו. בדיוק את זה אתה מקבל.
-            </p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- =================== CLOSING CTA =================== -->
-    <section class="relative overflow-hidden border-t border-line/60 px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
-      <div aria-hidden="true" class="pointer-events-none absolute -bottom-40 left-1/2 h-[40rem] w-[40rem] -translate-x-1/2 rounded-full bg-flame/10 blur-[120px]"></div>
-      <div class="relative mx-auto max-w-3xl text-center">
-        <p class="reveal text-lg text-muted">אתה יכול לסגור את הדף ולהישאר בדיוק באותו מקום.<br class="hidden sm:block" /> או להשאיר פרטים ולהתחיל לזוז.</p>
-        <h2 class="reveal mt-6 font-display text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-          הגיע הזמן לעבור<br />מדיבורים <span class="text-flame">לעשייה.</span>
-        </h2>
-
-        <div class="reveal mt-10 flex justify-center">
-          <a href="#form"
-             class="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-flame px-10 py-5 text-xl font-extrabold text-ink shadow-2xl shadow-flame/30 transition-colors duration-200 hover:bg-flameDk sm:w-auto">
-            השאר פרטים לפגישת היכרות חינם
-            <svg class="h-6 w-6 transition-transform duration-200 group-hover:-translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
-          </a>
-        </div>
-        <p class="reveal mt-5 text-sm text-muted">חינם · בלי התחייבות.</p>
-      </div>
-    </section>
   </main>
 
   <!-- =================== FOOTER =================== -->
-  <footer class="border-t border-line bg-surface px-4 py-12 sm:px-6 lg:px-8">
+  <footer class="border-t border-line bg-surface px-4 py-10 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-content text-center">
-      <span class="flex items-center justify-center gap-2 font-display text-xl font-extrabold">
+      <span class="flex items-center justify-center gap-2 font-display text-lg font-extrabold">
         <span class="inline-block h-3 w-3 rounded-sm bg-flame"></span>
         ליאם סוויסה
       </span>
-      <p class="mt-2 text-muted">התפתחות אישית בלי פילטרים.</p>
-      <a href="#form" class="mt-5 inline-block font-bold text-flame transition-colors duration-200 hover:text-flameDk">השאר פרטים לפגישת היכרות חינם</a>
-      <p class="mt-8 border-t border-line pt-6 text-sm text-muted">© 2026 ליאם סוויסה. כל הזכויות שמורות.</p>
+      <a href="#form" class="mt-4 inline-block font-bold text-flame transition-colors duration-200 hover:text-flameDk">בוא לפגישת היכרות חינם</a>
+      <p class="mt-6 text-sm text-muted">© 2026 ליאם סוויסה. כל הזכויות שמורות.</p>
     </div>
   </footer>
 
   <!-- =================== MOBILE STICKY CTA =================== -->
   <div id="mobileCta" class="fixed inset-x-0 bottom-0 z-50 translate-y-full border-t border-line bg-ink/95 p-3 backdrop-blur-md transition-transform duration-300 md:hidden">
     <a href="#form" class="flex w-full items-center justify-center gap-2 rounded-xl bg-flame px-6 py-3.5 text-base font-extrabold text-ink">
-      השאר פרטים לפגישת היכרות חינם
+      בוא לפגישת היכרות חינם
       <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
     </a>
   </div>
@@ -545,7 +354,7 @@
         .then(function (r) {
           if (r.ok && r.data && r.data.success) {
             form.reset();
-            setResult('קיבלתי! אני אחזור אליך ממש בקרוב לפגישת היכרות. תתכונן לזוז.');
+            setResult('קיבלתי! אני חוזר אליך ממש בקרוב. תתכונן לזוז.');
           } else {
             setResult('משהו נתקע בשליחה. נסה שוב עוד רגע.', 'error');
           }
@@ -554,7 +363,7 @@
           setResult('אין חיבור כרגע. נסה שוב עוד רגע.', 'error');
         })
         .finally(function () {
-          if (btn) { btn.disabled = false; btn.textContent = 'אני רוצה להתחיל'; }
+          if (btn) { btn.disabled = false; btn.textContent = 'אני רוצה לזוז'; }
         });
       });
     })();
